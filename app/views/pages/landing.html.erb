@@ -1,7 +1,13 @@
+<% if user_signed_in? %>
+
+<% else %>
+
 <div class="jumbotron jumbotron-landing">
   <h1 class="display-4">Share your emotions</h1>
   <p class="lead">Post your photos and subscribe on your friends pages</p>
   <hr class="my-4">
-   <a class="btn btn-primary" href="#" role="button">Create account</a>
-   <a class="btn btn-primary" href="#" role="button">Log In</a>
+   <%= link_to "Create account", new_user_registration_path, class: "btn btn-primary" %>
+   <%= link_to "Log In", new_user_session_path, class: "btn btn-primary" %>
 </div>
+
+<% end %> 
