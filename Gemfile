@@ -38,6 +38,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 #=============
 
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
+gem 'devise', '~> 4.6.2'
+
 
 group :development do
 	gem 'sqlite3'
