@@ -10,7 +10,7 @@ gem 'rails', '~> 5.2.1'
 # Use Puma as the app server
 gem 'puma'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+# gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -39,6 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'devise', '~> 4.6.2'
+gem 'jquery-rails'
 
 
 group :development do

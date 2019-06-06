@@ -4,29 +4,28 @@
     <title>Instaphoto</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <div class="container-fluid container-background">
-    <div class="container">
 
-    <ul class="nav">
-      <li class="nav-item">
-        <%= link_to "Main page", root_path %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "About", pages_about_path %>
-      </li>
 <% if user_signed_in? %>
-      <li class="nav-item">
-        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-      </li>
-<% end %>
-    </ul>
-      
+
+  <div class="container-fluid container-login">
+
+<% else %>
+
+    <div class="container-fluid container-background container-login">
+
+<% end %>  
+
+  <%= render "layouts/navigation" %>
+
+    <div class="container">
+       
      <p class="notice"><%= notice %></p>
      <p class="alert"><%= alert %></p>
 
