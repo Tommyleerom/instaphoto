@@ -1,0 +1,11 @@
+<% @friends.each do |friend| %>
+<div class="card photo-form">
+  <div class="card-block">
+   
+        <%= link_to friend.email, profile_path(friend.id) %> |
+          <%= link_to "Unsubscribe", unsubscribe_profile_path(friend.id) %>
+       
+    </div>
+</div>
+<br>
+<% end %>

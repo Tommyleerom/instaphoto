@@ -8,6 +8,17 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <%= link_to "Inataphoto", root_path, class: "navbar-brand text-logo landing-logo" %>
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+
+       <li class="nav-item active">
+        <%= link_to "My photos", profiles_my_photos_path, class: "nav-link" %> 
+      </li>
+       <li class="nav-item active">
+        <%= link_to "My subscribes", profiles_subscribes_list_path, class: "nav-link" %> 
+      </li>
+       <li class="nav-item active">
+        <%= link_to "Friends photos", profiles_friends_photos_path, class: "nav-link" %> 
+      </li>
+
       <li class="nav-item active">
         <%= link_to current_user.email, edit_user_registration_path, class: "nav-link" %> 
       </li>
