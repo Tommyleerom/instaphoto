@@ -3,7 +3,7 @@
   <div class="card-block">
     <%= image_tag photo.image.url(:medium) %><br>
         <%= photo.description %><br>
-        <%= link_to photo.user.email, profile_path(photo.user_id) if photo.user %><br>
+        <%= link_to photo.user.name, profile_path(photo.user_id) if photo.user %><br>
         <%= link_to 'Show', photo %>
 
         <% if photo.user == current_user %> | 
