@@ -5,10 +5,11 @@ $card-cap-bg: rgba(255, 255, 255, 0.5);
 $card-bg: rgba(255, 255, 255, 0.4);
 $body-bg: grey;
 @import "bootstrap";
+@import 'ionicons';
 
 .container-background {
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	background-size: cover;
 	background-image: url(image_path('background.jpeg'))
 }
@@ -42,4 +43,18 @@ $body-bg: grey;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: left;
+}
+
+.photo-link:hover {
+	opacity: 0.5;
+}
+
+.img-container {
+	width: 300px;
+	height: 200px;
+	overflow: hidden;
+}
+
+.img {
+	width: 100%;
 }

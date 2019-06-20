@@ -1,22 +1,20 @@
 <% @photos.each do |photo| %>
 <div class="card photo-form">
   <div class="card-block">
-    <%= image_tag photo.image.url(:medium) %><br>
+    <div class="img-container"><%= link_to photo, class: "photo-link" do %>
+    <%= image_tag photo.image.url(:medium), class: "img" %><% end %></div><br>
         <%= photo.description %><br>
-        <%= link_to photo.user.name, profile_path(photo.user_id) if photo.user %><br>
-        <%= link_to 'Show', photo %>
+        <%= link_to profile_path(photo.user_id) do %>
+          <i class="ion-person"></i> <%= photo.user.name %> <% end %>
 
-        <% if photo.user == current_user %> | 
-          <%= link_to 'Edit', edit_photo_path(photo) %> | 
-          <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% if photo.user == current_user %> 
+          <span><%= link_to edit_photo_path(photo) do %> 
+          <i class="ion-edit"></i> Edit <% end %> | 
+          <%= link_to photo, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="ion-trash-b"></i> Delete <% end %></span>
         <% end %>
     </div>
 </div>
     <% end %>
 
 <%= will_paginate @photos %>
-
-<br>
-<% if user_signed_in? %>
-  <%= link_to 'New Photo', new_photo_path, class: "btn btn-primary" %>
-<% end %>

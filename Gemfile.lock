@@ -78,6 +78,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
+    ionicons-rails (2.0.0)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
     jquery-rails (4.3.3)
@@ -201,6 +202,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.6.2)
+  ionicons-rails
   jbuilder (~> 2.5)
   jquery-rails
   paperclip (~> 6.0.0)

@@ -1,7 +1,9 @@
 class ProfilesController < ApplicationController
 before_action :set_user, except: [:my_photos, :subscribes_list, :friends_photos]
+before_action :authenticate_user!, except: [:show]
 
   def show
+    @photos = @user.photos.page(params[:page])
   end
 
   def subscribe
@@ -36,7 +38,7 @@ before_action :set_user, except: [:my_photos, :subscribes_list, :friends_photos]
   end
 
   def my_photos
-    @photos = current_user.photos.order('created_at DESC')
+    @photos = current_user.photos.order('created_at DESC').page(params[:page])
   end
 
   def subscribes_list
@@ -44,7 +46,7 @@ before_action :set_user, except: [:my_photos, :subscribes_list, :friends_photos]
   end
 
   def friends_photos
-    @photos = Photo.where(user_id: current_user.subscriptions.pluck(:friend_id)).order('created_at DESC')
+    @photos = Photo.where(user_id: current_user.subscriptions.pluck(:friend_id)).order('created_at DESC').page(params[:page])
   end
 
   private
