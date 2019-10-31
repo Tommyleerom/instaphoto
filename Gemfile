@@ -38,7 +38,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 #=============
 
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
-gem 'devise', '~> 4.6.2'
+gem 'devise', '~> 4.7.1'
 gem 'jquery-rails'
 gem "paperclip", "~> 6.0.0"
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
